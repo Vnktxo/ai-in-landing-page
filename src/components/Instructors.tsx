@@ -1,0 +1,70 @@
+import React from 'react';
+import { FiAward, FiBriefcase, FiTrendingUp, FiCpu, FiCode, FiBox } from 'react-icons/fi';
+
+const Instructors = () => {
+  return (
+    <section className="w-full py-20 lg:py-24 bg-[#1A1A1A]">
+      <div className="container mx-auto px-4 md:px-6">
+        {/* Section Headline */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-[#E0E0E0]">Meet Your Instructors</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-[#E0E0E0]/70">
+            Get the best of both worlds: a technical expert for hands-on skills and a career strategist for your professional growth.
+          </p>
+        </div>
+
+        {/* Instructors Grid */}
+        <div className="grid gap-10 md:grid-cols-2">
+          {/* Finney's Card */}
+          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A]">
+            <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 flex items-center justify-center">
+              <span className="text-[#888888]">Finney</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-[#00FFA3]">Finney</h3>
+            <p className="text-lg font-medium text-[#E0E0E0]/80">The Career Catalyst</p>
+            <div className="mt-4 text-left space-y-3">
+              <div className="flex items-start gap-3">
+                <FiAward className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
+                <p className="text-sm text-[#E0E0E0]/70">**Career Workshops:** Mastering personal branding & persuasion.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <FiBriefcase className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
+                <p className="text-sm text-[#E0E0E0]/70">**Interview Labs:** Learning what hiring managers really look for.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <FiTrendingUp className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
+                <p className="text-sm text-[#E0E0E0]/70">**HR Insights:** Decoding workplace dynamics & growth strategy.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Michael's Card */}
+          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A]">
+            <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 flex items-center justify-center">
+              <span className="text-[#888888]">Michael</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-[#00FFA3]">Michael</h3>
+            <p className="text-lg font-medium text-[#E0E0E0]/80">The Technical Expert</p>
+            <div className="mt-4 text-left space-y-3">
+              <div className="flex items-start gap-3">
+                <FiCpu className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
+                <p className="text-sm text-[#E0E0E0]/70">**Technical Deep Dives:** Leading the hands-on exploration of AI.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <FiCode className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
+                <p className="text-sm text-[#E0E0E0]/70">**AI Tool Mastery:** Guiding you through the practical use of modern AI tools.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <FiBox className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
+                <p className="text-sm text-[#E0E0E0]/70">**Project-Based Learning:** Overseeing the development of your portfolio projects.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Instructors;
