@@ -18,7 +18,7 @@ const Instructors = () => {
           {/* Finney's Card */}
           <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A]">
             <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 flex items-center justify-center">
-              <span className="text-[#888888]">Finney</span>
+              <img src="/finney.jpeg" alt="Finney" className="w-44 h-44 rounded-full object-cover" />
             </div>
             <h3 className="text-2xl font-semibold text-[#00FFA3]">Finney</h3>
             <p className="text-lg font-medium text-[#E0E0E0]/80">The Career Catalyst</p>
@@ -41,7 +41,7 @@ const Instructors = () => {
           {/* Michael's Card */}
           <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A]">
             <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 flex items-center justify-center">
-              <span className="text-[#888888]">Michael</span>
+              <img src="/Michael.jpeg" alt="Michael" className="w-48 h-48 rounded-full object-cover" />
             </div>
             <h3 className="text-2xl font-semibold text-[#00FFA3]">Michael</h3>
             <p className="text-lg font-medium text-[#E0E0E0]/80">The Technical Expert</p>
