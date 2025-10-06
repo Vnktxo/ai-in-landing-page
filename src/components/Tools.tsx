@@ -39,7 +39,7 @@ const Tools = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-[#E0E0E0] mb-8">Tools You'll Master</h3>
+          <h3 className="text-2xl font-bold text-[#E0E0E0] mb-8">Tools You will Master</h3>
           <div className="flex flex-wrap justify-center gap-8">
             <div className="flex flex-col items-center">
               <SiOpenai className="text-5xl text-[#00FFA3]" />      

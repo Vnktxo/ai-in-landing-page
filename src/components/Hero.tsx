@@ -105,7 +105,7 @@ const Hero = () => {
 
           <div className="lg:col-span-5 mt-12 lg:mt-0">
             <div className="bg-[#1A1A1A] backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-[#2A2A2A] transform hover:scale-105 transition duration-500">
-              <h3 className="text-2xl font-bold text-[#00FFA3] mb-6">What You'll Get</h3>
+              <h3 className="text-2xl font-bold text-[#00FFA3] mb-6">What You will Get</h3>
               <ul className="space-y-4 text-[#E0E0E0]">
                 <li className="flex items-start gap-3">
                   <span className="text-xl flex-shrink-0 mt-1 text-[#00FFA3]">→</span>

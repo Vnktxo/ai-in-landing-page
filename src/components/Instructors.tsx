@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { FiAward, FiBriefcase, FiTrendingUp, FiCpu, FiCode, FiBox } from 'react-icons/fi';
 
 const Instructors = () => {
@@ -16,51 +17,62 @@ const Instructors = () => {
         {/* Instructors Grid */}
         <div className="grid gap-10 md:grid-cols-2">
           {/* Finney's Card */}
-          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A]">
-            <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 flex items-center justify-center">
-              <img src="/finney.jpeg" alt="Finney" className="w-44 h-44 rounded-full object-cover" />
+          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
+            <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 overflow-hidden">
+              <Image 
+                src="/Finney.jpeg" 
+                alt="Finney" 
+                width={192} 
+                height={192} 
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-2xl font-semibold text-[#00FFA3]">Finney</h3>
-            <p className="text-lg font-medium text-[#E0E0E0]/80">The Career Catalyst</p>
-            <div className="mt-4 text-left space-y-3">
+            <p className="text-lg font-medium text-[#E0E0E0]/80 mb-6">The Career Catalyst</p>
+            <div className="w-full text-left space-y-3">
               <div className="flex items-start gap-3">
                 <FiAward className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
-                <p className="text-sm text-[#E0E0E0]/70">**Career Workshops:** Mastering personal branding & persuasion.</p>
+                <p className="text-sm text-[#E0E0E0]/70"><span className="font-semibold text-[#E0E0E0]">Career Workshops:</span> Mastering personal branding & persuasion</p>
               </div>
               <div className="flex items-start gap-3">
                 <FiBriefcase className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
-                <p className="text-sm text-[#E0E0E0]/70">**Interview Labs:** Learning what hiring managers really look for.</p>
+                <p className="text-sm text-[#E0E0E0]/70"><span className="font-semibold text-[#E0E0E0]">Interview Labs:</span> Learning what hiring managers really look for</p>
               </div>
               <div className="flex items-start gap-3">
                 <FiTrendingUp className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
-                <p className="text-sm text-[#E0E0E0]/70">**HR Insights:** Decoding workplace dynamics & growth strategy.</p>
+                <p className="text-sm text-[#E0E0E0]/70"><span className="font-semibold text-[#E0E0E0]">HR Insights:</span> Decoding workplace dynamics & growth strategy</p>
               </div>
             </div>
           </div>
 
           {/* Michael's Card */}
-          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A]">
-            <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 flex items-center justify-center">
-              <img src="/Michael.jpeg" alt="Michael" className="w-48 h-48 rounded-full object-cover" />
+          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
+            <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 overflow-hidden">
+              <Image 
+                src="/Michael.jpeg" 
+                alt="Michael" 
+                width={192} 
+                height={192} 
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-2xl font-semibold text-[#00FFA3]">Michael</h3>
-            <p className="text-lg font-medium text-[#E0E0E0]/80">The Technical Expert</p>
-            <div className="mt-4 text-left space-y-3">
+            <p className="text-lg font-medium text-[#E0E0E0]/80 mb-6">The Technical Expert</p>
+            <div className="w-full text-left space-y-3">
               <div className="flex items-start gap-3">
                 <FiCpu className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
-                <p className="text-sm text-[#E0E0E0]/70">**Technical Deep Dives:** Leading the hands-on exploration of AI.</p>
+                <p className="text-sm text-[#E0E0E0]/70"><span className="font-semibold text-[#E0E0E0]">Technical Deep Dives:</span> Leading the hands-on exploration of AI</p>
               </div>
               <div className="flex items-start gap-3">
                 <FiCode className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
-                <p className="text-sm text-[#E0E0E0]/70">**AI Tool Mastery:** Guiding you through the practical use of modern AI tools.</p>
+                <p className="text-sm text-[#E0E0E0]/70"><span className="font-semibold text-[#E0E0E0]">AI Tool Mastery:</span> Guiding you through practical use of modern AI tools</p>
               </div>
               <div className="flex items-start gap-3">
                 <FiBox className="h-5 w-5 mt-1 text-[#00FFA3] flex-shrink-0" />
-                <p className="text-sm text-[#E0E0E0]/70">**Project-Based Learning:** Overseeing the development of your portfolio projects.</p>
+                <p className="text-sm text-[#E0E0E0]/70"><span className="font-semibold text-[#E0E0E0]">Project-Based Learning:</span> Overseeing development of your portfolio projects</p>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
