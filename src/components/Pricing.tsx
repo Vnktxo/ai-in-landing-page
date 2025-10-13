@@ -4,8 +4,8 @@ import React from 'react';
 const pricingPlans = [
   {
     title: 'AI Starter Pack',
-    price: '₹9,999',
-    earlyBird: '₹8,999',
+    price: '₹10,999',
+    earlyBird: '₹9,999',
     features: [
       '16 Hours Hands-on Training',
       'Build 5+ Portfolio Projects',

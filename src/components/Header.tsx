@@ -1,6 +1,8 @@
 // src/components/Header.tsx
 "use client";
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,12 +15,22 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-[#0D0D0D]/98 backdrop-blur-md shadow-xl shadow-[#00FFA3]/10' : 'bg-[#0D0D0D]/80 backdrop-blur-sm'
+      scrolled ? 'bg-[#0D0D0D]/98 backdrop-blur-md shadow-3xl shadow-[#00FFA3]/10' : 'bg-[#0D0D0D]/80 backdrop-blur-sm'
     } border-b border-[#2A2A2A]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div className="flex items-center text-2xl font-extrabold text-[#E0E0E0] tracking-wider">
-          <span className="text-[#00FFA3]">AI in Practice</span>
-        </div>
+        <Link
+            href="/"
+            className="flex items-center space-x-2 text-2xl font-bold text-primary-dark hover:text-primary-light group"
+          >
+            <Image
+              src="/GrowInSTYL.png"
+              alt="GrowInSTYL Logo"
+              width={200}
+              height={100}
+              className="h-10 md:h-18 w-auto rounded-sm group-hover:scale-105 transition-transform duration-300"
+              priority
+            />
+          </Link>
         <nav className="hidden md:flex items-center gap-6">
           <a href="#curriculum" className="text-[#E0E0E0] hover:text-[#00FFA3] transition duration-200 font-medium">
             Curriculum

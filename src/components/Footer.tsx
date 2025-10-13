@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[#E0E0E0]/50">
-            © {new Date().getFullYear()} AI in Practice. All Rights Reserved. | Kovilambakkam, Chennai
+            © {new Date().getFullYear()} GrowInSTYL. All Rights Reserved. | Kovilambakkam, Chennai
           </p>
           <div className="flex items-center gap-6">
             <a 

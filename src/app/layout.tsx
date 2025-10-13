@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI in Practice - Master AI in 8 Weekends | Chennai",
+  title: "GrowInSTYL - Master AI in 8 Weekends | Chennai",
   description: "Transform from AI-curious to AI-capable. Build 5+ portfolio projects in 16 hours. Small batches, hands-on training in Kovilambakkam, Chennai.",
 };
 

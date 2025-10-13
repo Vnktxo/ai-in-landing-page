@@ -7,7 +7,7 @@ const TargetAudience = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#E0E0E0]">
-            The <span className="text-[#00FFA3]">AI in Practice</span> Difference
+            The <span className="text-[#00FFA3]">GrowInSTYL</span> Difference
           </h2>
           <p className="mt-4 text-xl text-[#E0E0E0]/70 max-w-3xl mx-auto">
             We cut the theoretical fluff and focus only on the tools and projects that matter to employers right now.
