@@ -1,4 +1,4 @@
-import Header from "@/components/Header"; // 👈 Add this import
+import Header from "@/components/Header"; 
 import Hero from "@/components/Hero";
 import ProofPoints from "@/components/ProofPoints";
 import TargetAudience from "@/components/TargetAudience";

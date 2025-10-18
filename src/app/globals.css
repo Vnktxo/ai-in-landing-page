@@ -13,6 +13,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   }
   
   body {
@@ -20,6 +21,16 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--matrix-bg);
     color: var(--matrix-fg);
+    font-family: var(--font-ibm-plex-mono), 'Courier New', monospace;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-ibm-plex-mono), 'Courier New', monospace;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 700;
   }
 }
 
