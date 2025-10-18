@@ -19,7 +19,7 @@ const ProofPoints = () => {
             <div className="text-[#E0E0E0]/70">Students per Batch</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-extrabold text-[#00FFA3] mb-2">8</div>
+            <div className="text-4xl font-extrabold text-[#00FFA3] mb-2">20+</div>
             <div className="text-[#E0E0E0]/70">AI Tools Mastered</div>
           </div>
         </div>

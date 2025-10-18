@@ -2,12 +2,12 @@
 import React from 'react';
 
 const curriculumData = [
-  { week: 1, title: 'AI Basics & Prompt Engineering', tools: 'ChatGPT, Gemini, Claude' },
-  { week: 2, title: 'Advanced ChatGPT Techniques', tools: 'Custom GPTs, Chain-of-thought' },
-  { week: 3, title: 'Image Generation Fundamentals', tools: 'Midjourney, DALL-E, Leonardo AI' },
-  { week: 4, title: 'Advanced Image Creation', tools: 'ControlNet, Inpainting' },
-  { week: 5, title: 'Video Generation & Editing', tools: 'RunwayML, Pika Labs, CapCut' },
-  { week: 6, title: 'AI-Assisted Coding', tools: 'GitHub Copilot, cursor.so' },
+  { week: 1, title: 'Intoduction to AI', tools: 'ChatGPT, Gemini, Claude' },
+  { week: 2, title: 'How to write a prompt', tools: 'Custom GPTs, Chain-of-thought' },
+  { week: 3, title: 'Image Generation', tools: 'Midjourney, DALL-E, Leonardo AI' },
+  { week: 4, title: 'Video Generation', tools: 'RunwayML, Pika Labs, CapCut' },
+  { week: 5, title: 'Agentic AI', tools: 'RunwayML, Pika Labs, CapCut' },
+  { week: 6, title: 'Vibe Coding', tools: 'GitHub Copilot, cursor.so' },
   { week: 7, title: 'Automation & Super Agent', tools: 'n8n, Make, Zapier' },
   { week: 8, title: 'Final Projects & Portfolio', tools: 'All course tools integrated' },
 ];

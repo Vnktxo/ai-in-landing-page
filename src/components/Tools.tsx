@@ -1,27 +1,51 @@
 // src/components/Tools.tsx
 import React from 'react';
-import { SiOpenai, SiN8N, SiZapier, SiGithub } from 'react-icons/si';
+import { InfiniteSlider } from './ui/infinite-slider';  
+import { SiOpenai, SiN8N, SiZapier, SiGithub, SiClaude, SiGooglegemini, SiGithubcopilot } from 'react-icons/si';
 
 const TESTIMONIALS = [
-  { name: "Priya S.", role: "Engineering Student", text: "Built my first AI automation pipeline in week 7. Already using it for my college project!" },
-  { name: "Rahul M.", role: "Product Manager", text: "The portfolio projects gave me something real to show in interviews. Worth every rupee." },
-  { name: "Ananya K.", role: "Marketing Professional", text: "Weekend format was perfect. Learned cutting-edge tools without taking time off work." }
+  { 
+    name: "Priya S.", 
+    role: "Engineering Student", 
+    text: "Built my first AI automation pipeline in week 7. Already using it for my college project!" 
+  },
+  { 
+    name: "Rahul M.", 
+    role: "Product Manager", 
+    text: "The portfolio projects gave me something real to show in interviews. Worth every rupee." 
+  },
+  { 
+    name: "Ananya K.", 
+    role: "Marketing Professional", 
+    text: "Weekend format was perfect. Learned cutting-edge tools without taking time off work." 
+  }
+];
+
+const TOOLS = [
+  { icon: SiOpenai, name: "ChatGPT" },
+  { icon: SiN8N, name: "n8n Automation" },
+  { icon: SiZapier, name: "Zapier" },
+  { icon: SiGithubcopilot, name: "GitHub Copilot" },
+  { icon: SiGithub, name: "GitHub" },
+  { icon: SiGooglegemini, name: "Gemini" },
+  { icon: SiClaude, name: "Claude" }
 ];
 
 const Tools = () => {
   return (
     <section className="w-full py-20 bg-[#0D0D0D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Testimonials Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#E0E0E0]">
             Real Results from <span className="text-[#00FFA3]">Real Students</span>
           </h2>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+       
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {TESTIMONIALS.map((t, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl hover:border-[#00FFA3]/50 transform hover:scale-105 transition duration-300"
             >
               <div className="flex mb-4 gap-1">
@@ -38,30 +62,25 @@ const Tools = () => {
           ))}
         </div>
 
+        {/* Tools Section */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-[#E0E0E0] mb-8">Tools You will Master</h3>
-          <div className="flex flex-wrap justify-center gap-8">
-            <div className="flex flex-col items-center">
-              <SiOpenai className="text-5xl text-[#00FFA3]" />      
-                <span className="mt-2 text-[#E0E0E0]/70">ChatGPT & Gemini</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiN8N className="text-5xl text-[#00FFA3]" />
-                <span className="mt-2 text-[#E0E0E0]/70">n8n Automation</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiZapier className="text-5xl text-[#00FFA3]" />
-                <span className="mt-2 text-[#E0E0E0]/70">Zapier</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiGithub className="text-5xl text-[#00FFA3]" />          
-                <span className="mt-2 text-[#E0E0E0]/70">GitHub Copilot</span>
-            </div>
-          </div>            
+          <h3 className="text-2xl font-bold text-[#E0E0E0] mb-8">Tools You Will Master</h3>
+          
+          <InfiniteSlider gap={20}>
+            {TOOLS.map((tool, index) => {
+              const IconComponent = tool.icon;
+              return (
+                <div key={index} className="flex flex-col items-center px-8">
+                  <IconComponent className="text-5xl text-[#00FFA3]" />
+                  <span className="mt-2 text-[#E0E0E0]/70 whitespace-nowrap">{tool.name}</span>
+                </div>
+              );
+            })}
+          </InfiniteSlider>
         </div>
-        </div>
+      </div>
     </section>
-    );
-
+  );
 };
+
 export default Tools;

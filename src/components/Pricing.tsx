@@ -72,6 +72,7 @@ const Pricing = () => {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#00FFA3] px-4 py-1 text-sm font-bold text-[#0D0D0D]">
                   Most Popular
                 </div>
+
               )}
               <h3 className="text-2xl font-bold text-[#E0E0E0] mb-2">{plan.title}</h3>
               <div className="mb-6">

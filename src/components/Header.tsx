@@ -15,13 +15,15 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-[#0D0D0D]/98 backdrop-blur-md shadow-3xl shadow-[#00FFA3]/10' : 'bg-[#0D0D0D]/80 backdrop-blur-sm'
+      scrolled ? 'backdrop-blur-2xl shadow-3xl shadow-[#00FFA3]/10' : 'bg-[#0D0D0D]/80 backdrop-blur-sm'
     } border-b border-[#2A2A2A]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link
             href="/"
-            className="flex items-center space-x-2 text-2xl font-bold text-primary-dark hover:text-primary-light group"
-          >
+            className="flex items-center space-x-2 text-2xl font-bold text-primary-dark hover:text-primary-light group">
+           <a href="#curriculum" className="text-[#E0E0E0] transition duration-200 font-medium">
+            GrowInSTYL
+          </a>
             <Image
               src="/GrowInSTYL.png"
               alt="GrowInSTYL Logo"
