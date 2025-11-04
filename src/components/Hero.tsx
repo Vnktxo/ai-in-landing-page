@@ -40,8 +40,7 @@ const Hero = () => {
               <span className="block text-[#00FFA3] drop-shadow-[0_0_20px_rgba(0,255,163,0.5)]">8 Weekends</span>
             </h1>
             <p className="mt-6 text-xl sm:text-2xl text-[#E0E0E0] max-w-2xl leading-relaxed">
-              Build the <span className="text-[#00FFA3] font-semibold">portfolio projects</span> employers actually want. 
-              Transform from AI-curious to AI-capable with ChatGPT, Midjourney, Copilot and Automation.
+              Build the <span className="text-[#00FFA3] font-semibold">portfolio projects</span> employers actually want. Level up from AI-curious to AI-capable with 20+ powerful AI tools set to dominate 2026 — stay ahead, stay future-ready.
             </p>
             
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">

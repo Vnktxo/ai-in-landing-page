@@ -1,43 +1,64 @@
-// src/components/Footer.tsx
 import React from 'react';
+import Link from 'next/link'; // Import Link
 import { SiWhatsapp, SiLinkedin } from 'react-icons/si';
 import { FiMail } from 'react-icons/fi';
 
 const Footer = () => {
   return (
-    <footer className="w-full py-10 bg-[#0D0D0D] border-t border-[#2A2A2A]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-[#E0E0E0]/50">
-            © {new Date().getFullYear()} GrowInSTYL. All Rights Reserved. | Kovilambakkam, Chennai
-          </p>
-          <div className="flex items-center gap-6">
-            <a 
-              href="mailto:hello@aiinpractice.com" 
-              className="text-[#E0E0E0]/70 hover:text-[#00FFA3] transition duration-300"
-              aria-label="Email"
-            >
-              <FiMail size={20} />
-            </a>
-            <a 
-              href="https://wa.me/919876543210" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-[#E0E0E0]/70 hover:text-[#00FFA3] transition duration-300"
-              aria-label="WhatsApp"
-            >
-              <SiWhatsapp size={20} />
-            </a>
-            <a 
-              href="https://linkedin.com/company/aiinpracticechennai" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-[#E0E0E0]/70 hover:text-[#00FFA3] transition duration-300"
-              aria-label="LinkedIn"
-            >
-              <SiLinkedin size={20} />
-            </a>
+    <footer className="w-full py-12 bg-[#1A1A1A] border-t border-[#2A2A2A]">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          
+          {/* Column 1: Brand & Social */}
+          <div>
+            <h3 className="text-lg font-semibold text-[#00FFA3] mb-4">
+              AI in Practice
+            </h3>
+            <div className="flex items-center gap-4">
+              <a href="mailto:hello@aiinpractice.com" aria-label="Email" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
+                <FiMail size={20} />
+              </a>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
+                <SiWhatsapp size={20} />
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
+                <SiLinkedin size={20} />
+              </a>
+            </div>
           </div>
+
+          {/* Column 2: Quick Links */}
+          <div>
+            <h3 className="text-md font-semibold text-[#E0E0E0] mb-4">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              <li><Link href="/about" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">About Us</Link></li>
+              <li><Link href="/services" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">Services</Link></li>
+              <li><Link href="/contact" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 3: Legal */}
+          <div>
+            <h3 className="text-md font-semibold text-[#E0E0E0] mb-4">
+              Legal
+            </h3>
+            <ul className="space-y-2">
+              <li><Link href="/privacy-policy" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">Terms of Service</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Copyright */}
+          <div>
+            <p className="text-sm text-[#E0E0E0]/70">
+              © {new Date().getFullYear()} GrowInSTYL.
+              <br/>
+              All rights reserved.
+            </p>
+          </div>
+
         </div>
       </div>
     </footer>

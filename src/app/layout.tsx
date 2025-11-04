@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, IBM_Plex_Mono } from "next/font/google";
+import Header from "@/components/Header"; 
+import Footer from "@/components/Footer"; 
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${ibmPlexMono.variable} antialiased bg-gray-900 text-white`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
