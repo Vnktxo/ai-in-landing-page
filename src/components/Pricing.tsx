@@ -1,4 +1,3 @@
-// src/components/Pricing.tsx
 import React from 'react';
 
 const pricingPlans = [
@@ -15,6 +14,7 @@ const pricingPlans = [
       '7-Day Money-Back Guarantee',
     ],
     popular: false,
+    valuable: false, // Added for consistent data structure
   },
   {
     title: 'AI Pro Builder',
@@ -29,6 +29,7 @@ const pricingPlans = [
       'Limited to 30 seats',
     ],
     popular: true,
+    valuable: false,
   },
   {
     title: 'AI Career Accelerator',
@@ -42,7 +43,8 @@ const pricingPlans = [
       '3 Months Career Guidance',
       'Priority Workshop Access',
     ],
-    popular: false,
+    popular: false, // Ensure only one is 'popular' if that's the logic
+    valuable: true,
   },
 ];
 
@@ -62,37 +64,46 @@ const Pricing = () => {
 
         <div className="grid gap-8 lg:grid-cols-3">
           {pricingPlans.map((plan) => (
+            // Merged the two nested divs into one
             <div
               key={plan.title}
+              // Border color: gold for valuable, green for popular, default otherwise
               className={`relative flex flex-col bg-[#1A1A1A] p-8 rounded-2xl border-2 ${
-                plan.popular ? 'border-[#00FFA3]' : 'border-[#2A2A2A]'
-              } hover:border-[#00FFA3]/70 transition-all duration-300 transform hover:scale-105`}
+                plan.valuable ? 'border-[#FFD700] hover:border-[#FFD700]/70' : plan.popular ? 'border-[#00FFA3]' : 'border-[#2A2A2A]'
+              } transition-all duration-300 transform hover:scale-105`}
             >
               {plan.popular && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#00FFA3] px-4 py-1 text-sm font-bold text-[#0D0D0D]">
                   Most Popular
                 </div>
-
+              )}
+              {plan.valuable && (
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FFD700] px-4 py-1 text-sm font-bold text-black">
+                  Most Valuable
+                </div>
               )}
               <h3 className="text-2xl font-bold text-[#E0E0E0] mb-2">{plan.title}</h3>
               <div className="mb-6">
-                <p className="text-4xl font-extrabold text-[#00FFA3]">{plan.earlyBird}</p>
+                <p className={`text-4xl font-extrabold ${plan.valuable ? 'text-most-valuable' : 'text-[#00FFA3]'}`}>{plan.earlyBird}</p>
                 <p className="text-sm text-[#E0E0E0]/50 line-through">{plan.price}</p>
               </div>
               <ul className="space-y-3 text-[#E0E0E0] flex-grow mb-8">
                 {plan.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <span className="text-[#00FFA3] flex-shrink-0">✓</span>
+                    <span className={`${plan.valuable ? 'text-most-valuable' : 'text-[#00FFA3]'} flex-shrink-0`}>✓</span>
                     <span className="text-sm">{feature}</span>
                   </li>
                 ))}
               </ul>
               <a
                 href="#enroll"
+                // Button logic: gold for valuable, green for popular, neutral otherwise
                 className={`block w-full py-3 text-center rounded-xl font-bold text-lg transition duration-300 transform hover:scale-105 ${
-                  plan.popular
-                    ? 'bg-[#00FFA3] text-[#0D0D0D] shadow-lg shadow-[#00FFA3]/30'
-                    : 'bg-[#2A2A2A] text-[#E0E0E0] hover:bg-[#00FFA3] hover:text-[#0D0D0D]'
+                  plan.valuable
+                    ? 'bg-[#FFD700] text-[#0D0D0D] hover:bg-[#FFD700] hover:text-[#0D0D0D]  shadow-lg shadow-[#FFD700]/30'
+                    : plan.popular
+                      ? 'bg-[#00FFA3] text-[#0D0D0D] hover:shadow-lg shadow-[#00FFA3]/30'
+                      : 'bg-[#2A2A2A] text-[#E0E0E0] hover:bg-[#00FFA3] hover:text-[#0D0D0D]'
                 }`}
               >
                 Enroll Now
@@ -101,6 +112,7 @@ const Pricing = () => {
           ))}
         </div>
 
+        {/* Moved Student Discount box outside of the map loop */}
         <div className="mt-12 text-center p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl">
           <p className="text-lg text-[#E0E0E0]">
             <span className="text-[#00FFA3] font-semibold">Student Discount:</span> Get any package for ₹7,999 with valid student ID (Max 3 per batch)

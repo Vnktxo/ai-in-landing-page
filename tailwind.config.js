@@ -23,9 +23,13 @@ const config = {
         "star-movement-top": "star-movement-top 6s linear infinite",
         "star-movement-bottom": "star-movement-bottom 6s linear infinite",
       },
+      // Add custom color for "most valuable"
+      colors: {
+        "most-valuable": "#FFD700", // gold
+      },
     },
   },
-// Remove direct require("tw-animate-css") from here to avoid hard crash when not installed
+  // Remove direct require("tw-animate-css") from here to avoid hard crash when not installed
   plugins: [],
 };
 

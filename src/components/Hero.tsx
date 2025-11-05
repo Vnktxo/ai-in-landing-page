@@ -60,7 +60,9 @@ const Hero = () => {
 
             <div className="mt-12 p-8 bg-[#1A1A1A] border-2 border-[#00FFA3]/30 rounded-2xl shadow-2xl shadow-[#00FFA3]/10" id="enroll">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
-                <h2 className="text-2xl font-bold text-[#E0E0E0]">Secure Your Seat</h2>
+                <h2 className="text-2xl font-bold text-[#E0E0E0]">To Keep You Updated.
+                  
+                </h2>
                 <div className="bg-yellow-500/20 border border-yellow-500/50 px-4 py-2 rounded-full">
                   <span className="text-yellow-400 font-bold text-sm">Early Bird: ₹8,999</span>
                 </div>

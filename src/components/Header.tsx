@@ -15,12 +15,12 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'backdrop-blur-2xl shadow-3xl shadow-[#00FFA3]/10' : 'bg-[#0D0D0D]/80 backdrop-blur-sm'
+      scrolled ? 'backdrop-blur-md shadow-3xl bg-[#000000]/20 shadow-[#00FFA3]/10' : 'bg-[#0D0D0D]/80 backdrop-blur-sm'
     } border-b border-[#2A2A2A]`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-center md:justify-between items-center">
         <Link
           href="/"
-          className="flex flex-col items-center space-y-1 text-2xl font-bold text-primary-dark hover:text-primary-light group"
+          className="w-full md:w-auto flex flex-col items-center space-y-1 text-2xl font-bold text-primary-dark hover:text-primary-light group"
         >
           <Image
             src="/GrowInSTYL.png"
@@ -43,12 +43,14 @@ const Header = () => {
             Pricing
           </a>
          
-          <a
-            href="#enroll"
-            className="px-5 py-2 text-sm font-semibold rounded-full bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 transition duration-300 shadow-lg shadow-[#00FFA3]/30"
-          >
-            Enroll Now
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="#enroll"
+              className="px-5 py-2 text-sm font-semibold rounded-full bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 transition duration-300 shadow-lg shadow-[#00FFA3]/30"
+            >
+              Enroll Now
+            </a>
+          </div>
         </nav>
       </div>
     </header>
