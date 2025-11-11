@@ -9,10 +9,10 @@ export default function PrivacyPolicyPage() {
           Last Updated: November 11, 2025
         </p>
         <p className="text-[#E0E0E0]/70">
-          GrowInSTYL ("we," "us," or "our") is committed to protecting your privacy. 
+          GrowInSTYL (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy. 
           This Privacy Policy explains how we collect, use, disclose, and safeguard 
           your information when you visit our website `growinstyl.doitinsty.com` 
-          (the "Website") and use our services.
+          (the &quot;Website&quot;) and use our services.
         </p>
         
         <h2 className="text-2xl font-semibold text-[#E0E0E0] mt-8 mb-4">
@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
           <li><strong>CCPA Rights:</strong> If you are a California resident, you have the right to know what personal information is collected, used, and shared, and the right to request the deletion of your personal information.</li>
         </ul>
         <p className="text-[#E0E0E0]/70">
-          To exercise any of these rights, please contact us at <a href="mailto:hello@aiinpractice.com" className="text-[#00FFA3]">hello@aiinpractice.com</a>.
+          To exercise any of these rights, please contact us at <a href="mailto:growinstyl.ai@gmail.com" className="text-[#00FFA3]">growinstyl.ai@gmail.com</a>.
         </p>
 
         <h2 className="text-2xl font-semibold text-[#E0E0E0] mt-8 mb-4">
@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
           If you have any questions about this Privacy Policy, please contact us:
         </p>
         <ul className="text-[#E0E0E0]/70">
-          <li><strong>By email:</strong> <a href="mailto: growinstyl.ai@gmail.com" className="text-[#00FFA3]">growinstyl.ai@gmail.com</a></li>
+          <li><strong>By email:</strong> <a href="mailto:growinstyl.ai@gmail.com" className="text-[#00FFA3]">growinstyl.ai@gmail.com</a></li>
           <li><strong>By phone:</strong> <a href="tel:+919876543210" className="text-[#00FFA3]">+91 98765 43210</a></li>
         </ul>
       </div>

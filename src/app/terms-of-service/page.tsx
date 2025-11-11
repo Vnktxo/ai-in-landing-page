@@ -11,25 +11,24 @@ export default function TermsOfServicePage() {
         <p className="text-[#E0E0E0]/70">
           Last Updated: November 11, 2025
         </p>
-        <p className="text-[#E0E0E0]/70">
-          Please read these Terms of Service ("Terms") carefully before using the 
-          growinstyl.doitinsty.com website (the "Website") and the services 
-          offered by GrowInSTYL ("we," "us," or "our").
+       <p className="text-[#E0E0E0]/70">
+          Please read these Terms of Service (&quot;Terms&quot;) carefully before using the 
+          growinstyl.doitinsty.com website (the &quot;Website&quot;) and the services 
+          offered by GrowInSTYL (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
         </p>
         <p className="text-[#E0E0E0]/70">
           By accessing or using the Website, enrolling in a course, or using our services, 
-          you ("you" or "User") agree to be bound by these Terms. If you disagree 
+          you (&quot;you&quot; or &quot;User&quot;) agree to be bound by these Terms. If you disagree 
           with any part of the terms, you may not access the Service.
         </p>
-
         <h2 className="text-2xl font-semibold text-[#E0E0E0] mt-8 mb-4">
           1. Definitions
         </h2>
-        <ul className="text-[#E0E0E0]/70">
-          <li><strong>"Service"</strong> refers to the educational courses, content, materials, and any other services provided by GrowInSTYL, including the "AI in Practice" course.</li>
-          <li><strong>"Course"</strong> refers to any specific educational program offered, such as the 8-week AI course.</li>
-          <li><strong>"User"</strong> means any individual who accesses the Website or enrolls in a Course.</li>
-          <li><strong>"Content"</strong> means all information, text, graphics, videos, and other material available on the Website or as part of a Course.</li>
+         <ul className="text-[#E0E0E0]/70">
+          <li><strong>&quot;Service&quot;</strong> refers to the educational courses, content, materials, and any other services provided by GrowInSTYL, including the &quot;AI in Practice&quot; course.</li>
+          <li><strong>&quot;Course&quot;</strong> refers to any specific educational program offered, such as the 8-week AI course.</li>
+          <li><strong>&quot;User&quot;</strong> means any individual who accesses the Website or enrolls in a Course.</li>
+          <li><strong>&quot;Content&quot;</strong> means all information, text, graphics, videos, and other material available on the Website or as part of a Course.</li>
         </ul>
 
         <h2 className="text-2xl font-semibold text-[#E0E0E0] mt-8 mb-4">
@@ -95,8 +94,7 @@ export default function TermsOfServicePage() {
           7. Disclaimers and Limitation of Liability
         </h2>
         <p className="text-[#E0E0E0]/70">
-          7.1. Disclaimer of Warranties: The Service is provided on an "AS IS" and "AS AVAILABLE" basis. We make no warranties, express or implied, regarding the completeness, accuracy, reliability, or suitability of the Content.
-        </p>
+.1. Disclaimer of Warranties: The Service is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis. We make no warranties, express or implied, regarding the completeness, accuracy, reliability, or suitability of the Content.        </p>
         <p className="text-[#E0E0E0]/70">
           7.2. Limitation of Liability: To the fullest extent permitted by law, GrowInSTYL (including its instructors and affiliates) shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, arising from your use of the Service.
         </p>

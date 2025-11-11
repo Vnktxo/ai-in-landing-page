@@ -15,7 +15,7 @@ export default function RefundPolicyPage() {
         <h2 className="text-2xl font-semibold text-[#E0E0E0] mt-8 mb-4">
           1. Our 7-Day Guarantee
         </h2>
-        <p className="text-[#E0E0E0]/7L0">
+        <p className="text-[#E0E0E0]/70">
           We offer a 7-day money-back guarantee on our Courses. We are confident in the 
           value we provide, but if you are not satisfied after the first session, 
           you may be eligible for a refund.
@@ -49,8 +49,8 @@ export default function RefundPolicyPage() {
           4. How to Request a Refund
         </h2>
         <p className="text-[#E0E0E0]/70">
-          To request a refund, you must send an email to <a href="mailto: growinstyl.ai@gmail.com" className="text-[#00FFA3]">growinstyl.ai@gmail.com</a> with the 
-          subject line "Refund Request." Please include your full name, the 
+          To request a refund, you must send an email to <a href="mailto:growinstyl.ai@gmail.com" className="text-[#00FFA3]">growinstyl.ai@gmail.com</a> with the 
+          subject line &quot;Refund Request.&quot; Please include your full name, the 
           email address used for enrollment, and the reason for your request.
         </p>
 
@@ -75,10 +75,9 @@ export default function RefundPolicyPage() {
           7. Contact Us
         </h2>
         <p className="text-[#E0E0E0]/70">
-          If you have any questions about our Refund Policy, please contact us at <a href="mailto: growinstyl.ai@gmail.com" className="text-[#00FFA3]">growinstyl.ai@gmail.com</a>.
+          If you have any questions about our Refund Policy, please contact us at <a href="mailto:growinstyl.ai@gmail.com" className="text-[#00FFA3]">growinstyl.ai@gmail.com</a>.
         </p>
       </div>
     </div>
   );
 }
-

@@ -53,7 +53,7 @@ const FAQ = () => {
           <h2 className="text-3xl sm:text-5xl font-extrabold text-[#E0E0E0] mb-4">
             Got <span className="text-[#00FFA3] drop-shadow-[0_0_20px_rgba(0,255,163,0.5)]">Questions?</span>
           </h2>
-          <p className="text-xl text-[#E0E0E0]/70">We've got answers. Still not sure? Message us on WhatsApp.</p>
+          <p className="text-xl text-[#E0E0E0]/70">We&apos;ve got answers. Still not sure? Message us on WhatsApp.</p>
         </div>
 
         <div className="space-y-4">

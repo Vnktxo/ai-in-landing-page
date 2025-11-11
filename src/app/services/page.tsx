@@ -9,7 +9,7 @@ export default function ServicesPage() {
           Our <span className="text-[#00FFA3]">Services</span>
         </h1>
         <p className="text-xl text-center text-[#E0E0E0]/70 mb-12">
-          We offer one flagship service: the 8-week "AI in Practice" 
+          We offer one flagship service: the 8-week &quot;AI in Practice&quot; 
           hands-on course.
         </p>
       </div>
