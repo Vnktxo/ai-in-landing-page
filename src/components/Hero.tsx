@@ -104,32 +104,24 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 mt-12 lg:mt-0">
-            <div className="bg-[#1A1A1A] backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-[#2A2A2A] transform hover:scale-105 transition duration-500">
-              <h3 className="text-2xl font-bold text-[#00FFA3] mb-6">What You will Get</h3>
-              <ul className="space-y-4 text-[#E0E0E0]">
-                <li className="flex items-start gap-3">
-                  <span className="text-xl flex-shrink-0 mt-1 text-[#00FFA3]">→</span>
-                  <span><span className="font-semibold text-[#00FFA3]">Portfolio Projects:</span> AI Resume Builder, Content Engine, Study Buddy, Startup Validator</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-xl flex-shrink-0 mt-1 text-[#00FFA3]">→</span>
-                  <span><span className="font-semibold text-[#00FFA3]">Live Hands-On:</span> Kovilambakkam classroom, Saturdays 2-4 PM</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-xl flex-shrink-0 mt-1 text-[#00FFA3]">→</span>
-                  <span><span className="font-semibold text-[#00FFA3]">LinkedIn Certificate:</span> Shareable credential with verification</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-xl flex-shrink-0 mt-1 text-[#00FFA3]">→</span>
-                  <span><span className="font-semibold text-[#00FFA3]">Small Batches:</span> Max 10 students for personal attention</span>
-                </li>
-              </ul>
-              <div className="mt-8 p-4 bg-[#00FFA3]/10 border border-[#00FFA3]/30 rounded-xl">
-                <p className="text-[#00FFA3] font-semibold text-center">Student Discount: ₹7,999 with Valid ID</p>
-              </div>
+          {/* === START OF CHANGED BLOCK === */}
+          {/* Right Column: Video Showcase */}
+          <div className="lg:col-span-5 mt-12 lg:mt-0 flex items-center justify-center">
+            <div className="w-full aspect-video rounded-2xl overflow-hidden border-2 border-[#00FFA3]/30 shadow-2xl shadow-[#00FFA3]/10">
+              <video 
+                className="w-full h-full object-cover"
+                src="/hero-video1.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
+          {/* === END OF CHANGED BLOCK === */}
+
         </div>
       </div>
     </section>

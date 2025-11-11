@@ -48,14 +48,8 @@ const Instructors = () => {
 
           {/* Michael's Card */}
           <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
-            <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 overflow-hidden">
-              <Image 
-                src="/Michael.jpeg" 
-                alt="Michael" 
-                width={192} 
-                height={192} 
-                className="w-full h-full object-cover"
-              />
+          <div className="w-48 h-48 rounded-full bg-[#0D0D0D] mb-4 flex items-center justify-center border-2 border-[#00FFA3]/50">
+              <span className="text-7xl font-light text-[#00FFA3]">M</span>
             </div>
             <h3 className="text-2xl font-semibold text-[#00FFA3]">Michael</h3>
             <p className="text-lg font-medium text-[#E0E0E0]/80 mb-6">The Technical Expert</p>

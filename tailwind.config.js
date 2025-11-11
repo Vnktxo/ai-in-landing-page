@@ -7,8 +7,10 @@ const config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    // ... theme extensions
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/hero-pattern.svg')", // This is from your new Hero.tsx
+      },
       keyframes: {
         "star-movement-top": {
           from: { transform: "translateX(0%)" },
@@ -23,14 +25,14 @@ const config = {
         "star-movement-top": "star-movement-top 6s linear infinite",
         "star-movement-bottom": "star-movement-bottom 6s linear infinite",
       },
-      // Add custom color for "most valuable"
       colors: {
         "most-valuable": "#FFD700", // gold
       },
     },
   },
-  // Remove direct require("tw-animate-css") from here to avoid hard crash when not installed
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"), // 👈 This was missing
+  ],
 };
 
 export default config;

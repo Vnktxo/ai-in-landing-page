@@ -1,6 +1,6 @@
 // src/components/Tools.tsx
 import React from 'react';
-import { InfiniteSlider } from './ui/infinite-slider';  
+import { InfiniteSlider } from '@/components/ui/infinite-slider';  
 import { SiOpenai, SiN8N, SiZapier, SiGithub, SiClaude, SiGooglegemini, SiGithubcopilot } from 'react-icons/si';
 
 const TESTIMONIALS = [
