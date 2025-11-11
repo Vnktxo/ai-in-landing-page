@@ -4,7 +4,7 @@ import { FiAward, FiBriefcase, FiTrendingUp, FiCpu, FiCode, FiBox, FiTarget, FiZ
 
 const Instructors = () => {
   return (
-    <section className="w-full py-20 lg:py-24 bg-[#1A1A1A]">
+    <section className="w-full py-20 lg:py-24 bg-transprent" id="instructors">
       <div className="container mx-auto px-4 md:px-6">
         {/* Section Headline */}
         <div className="text-center mb-12">
@@ -18,7 +18,7 @@ const Instructors = () => {
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
           
           {/* Finney's Card */}
-          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
+          <div className="flex flex-col items-center text-center bg-gradient-to-b from-[#0D0D0D] to-[#0D0D0D]/5 p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
             <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 overflow-hidden">
               <Image 
                 src="/Finney.jpeg" 
@@ -47,7 +47,7 @@ const Instructors = () => {
           </div>
 
           {/* Michael's Card */}
-          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
+          <div className="flex flex-col items-center text-center bg-gradient-to-b from-[#0D0D0D] to-[#0D0D0D]/5 p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
           <div className="w-48 h-48 rounded-full bg-[#0D0D0D] mb-4 flex items-center justify-center border-2 border-[#00FFA3]/50">
               <span className="text-7xl font-light text-[#00FFA3]">M</span>
             </div>
@@ -70,7 +70,7 @@ const Instructors = () => {
           </div>
 
           {/* Samhitha's Card - Moved to the correct level and typo fixed */}
-          <div className="flex flex-col items-center text-center bg-[#0D0D0D] p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
+          <div className="flex flex-col items-center text-center bg-gradient-to-b from-[#0D0D0D] to-[#0D0D0D]/5 p-8 rounded-lg border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-300">
             <div className="w-48 h-48 rounded-full bg-[#2A2A2A] mb-4 overflow-hidden">
               <Image 
                 src="/Samhitha.jpg" 

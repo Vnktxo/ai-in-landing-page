@@ -7,6 +7,8 @@ import Instructor from "@/components/Instructors";
 import Curriculum from "@/components/Curriculum";
 import Tools from "@/components/Tools";
 import Pricing from "@/components/Pricing";
+import Comparison from "@/components/Comparison"; 
+import FAQ from "@/components/FAQ";
 import Guarantee from "@/components/Guarantee";
 import FinalCTA from "@/components/FinalCTA";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -24,6 +26,8 @@ export default function Home() {
         <ScrollReveal><Curriculum /></ScrollReveal>
         <ScrollReveal><Tools /></ScrollReveal>
         <ScrollReveal><Pricing /></ScrollReveal>
+        <ScrollReveal><Comparison /></ScrollReveal>
+        <ScrollReveal><FAQ /></ScrollReveal>
         <ScrollReveal><Guarantee /></ScrollReveal>
         <ScrollReveal><FinalCTA /></ScrollReveal>
       </main>

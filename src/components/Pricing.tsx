@@ -50,7 +50,7 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="w-full py-20 bg-[#0D0D0D]">
+    <section id="pricing" className="w-full py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-block rounded-lg bg-[#00FFA3]/10 border border-[#00FFA3]/30 px-4 py-2 text-sm text-[#00FFA3] mb-4">
@@ -68,7 +68,7 @@ const Pricing = () => {
             <div
               key={plan.title}
               // Border color: gold for valuable, green for popular, default otherwise
-              className={`relative flex flex-col bg-[#1A1A1A] p-8 rounded-2xl border-2 ${
+              className={`relative flex flex-col bg-[#1A1A1A]/50 p-8 rounded-2xl border-2 ${
                 plan.valuable ? 'border-[#FFD700] hover:border-[#FFD700]/70' : plan.popular ? 'border-[#00FFA3]' : 'border-[#2A2A2A]'
               } transition-all duration-300 transform hover:scale-105`}
             >
@@ -113,7 +113,7 @@ const Pricing = () => {
         </div>
 
         {/* Moved Student Discount box outside of the map loop */}
-        <div className="mt-12 text-center p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-xl">
+        <div className="mt-12 text-center p-6 bg-[#1A1A1A]/20 border border-[#2A2A2A] backdrop-blur-2xl rounded-xl">
           <p className="text-lg text-[#E0E0E0]">
             <span className="text-[#00FFA3] font-semibold">Student Discount:</span> Get any package for ₹7,999 with valid student ID (Max 3 per batch)
           </p>

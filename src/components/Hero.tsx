@@ -19,7 +19,7 @@ const Hero = () => {
   }, [email, isLoading]);
 
   return (
-    <section id="hero" className="relative pt-32 pb-20 bg-[#0D0D0D] text-[#E0E0E0] min-h-screen flex items-center overflow-hidden w-full">
+    <section id="hero" className="relative pt-32 pb-20 bg-gradient-to-b from-[#0D0D0D]  text-[#E0E0E0] min-h-screen flex items-center overflow-hidden w-full">
       <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
       <div className="absolute top-20 left-10 w-96 h-96 bg-[#00FFA3]/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#00FFA3]/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>

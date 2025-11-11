@@ -3,7 +3,7 @@ import React from 'react';
 
 const ProofPoints = () => {
   return (
-    <section className="w-full py-16 bg-[#0D0D0D] border-y border-[#2A2A2A]">
+    <section className="w-full py-16 bg-transparent border-y border-[#2A2A2A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">

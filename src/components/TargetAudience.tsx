@@ -3,7 +3,7 @@ import React from 'react';
 
 const TargetAudience = () => {
   return (
-    <section className="w-full py-20 bg-[#0D0D0D]">
+    <section className="w-full py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#E0E0E0]">

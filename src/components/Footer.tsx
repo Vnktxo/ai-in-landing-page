@@ -1,21 +1,21 @@
 import React from 'react';
-import Link from 'next/link'; // Import Link
+import Link from 'next/link';
 import { SiWhatsapp, SiLinkedin } from 'react-icons/si';
 import { FiMail } from 'react-icons/fi';
 
 const Footer = () => {
   return (
-    <footer className="w-full py-12 bg-[#1A1A1A] border-t border-[#2A2A2A]">
+    <footer className="w-full py-12 bg-gradient-to-b from-[#0D0D0D]/30 to-[#0D0D0D]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           
           {/* Column 1: Brand & Social */}
           <div>
             <h3 className="text-lg font-semibold text-[#00FFA3] mb-4">
-              AI in Practice
+              GrowInSTYL
             </h3>
             <div className="flex items-center gap-4">
-              <a href="mailto:hello@aiinpractice.com" aria-label="Email" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
+              <a href="mailto: growinstyl.ai@gmail.com" aria-label="Email" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
                 <FiMail size={20} />
               </a>
               <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
@@ -47,6 +47,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/privacy-policy" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">Terms of Service</Link></li>
+              <li><Link href="/refund-policy" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">Refund Policy</Link></li>
             </ul>
           </div>
 

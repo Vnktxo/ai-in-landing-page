@@ -33,7 +33,7 @@ const TOOLS = [
 
 const Tools = () => {
   return (
-    <section className="w-full py-20 bg-[#0D0D0D]">
+    <section className="w-full py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Testimonials Section */}
         <div className="text-center mb-12">
@@ -46,7 +46,7 @@ const Tools = () => {
           {TESTIMONIALS.map((t, i) => (
             <div
               key={i}
-              className="p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl hover:border-[#00FFA3]/50 transform hover:scale-105 transition duration-300"
+              className="p-6  bg-[#1A1A1A]/70 border border-[#2A2A2A] rounded-2xl backdrop-blur-xl hover:border-[#00FFA3]/50 transform hover:scale-105 transition duration-300"
             >
               <div className="flex mb-4 gap-1">
                 {[...Array(5)].map((_, j) => (

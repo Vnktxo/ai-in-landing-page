@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --radius: 0.625rem;
   --matrix-bg: #0D0D0D;
@@ -21,6 +22,11 @@
     background-color: var(--matrix-bg);
     color: var(--matrix-fg);
     font-family: var(--font-ibm-plex-mono), 'Courier New', monospace;
+
+    background-image: radial-gradient(var(--matrix-border) 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: 0 0;
+    animation: drift 100s linear infinite;
   }
 
   code, pre, .font-mono {
@@ -50,4 +56,9 @@
   .border-matrix {
     border-color: var(--matrix-primary);
   }
+}
+
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: 0 4000px; }
 }

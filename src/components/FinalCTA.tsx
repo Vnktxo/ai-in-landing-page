@@ -2,7 +2,7 @@ import React from 'react';
 
 const FinalCTA = () => {
   return (
-    <section className="w-full py-20 bg-[#0D0D0D] border-t border-[#2A2A2A]">
+    <section className="w-full py-20 bg-transparent border-t border-[#2A2A2A]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-5xl font-bold text-[#E0E0E0] mb-6">
           Ready to Become an <span className="text-[#00FFA3]">AI Builder</span>?

@@ -14,7 +14,7 @@ const curriculumData = [
 
 const Curriculum = () => {
   return (
-    <section id="curriculum" className="w-full py-20 bg-[#0D0D0D]">
+    <section id="curriculum" className="w-full py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#E0E0E0]">
@@ -29,7 +29,7 @@ const Curriculum = () => {
           {curriculumData.map((session) => (
             <div 
               key={session.week} 
-              className="p-6 bg-[#1A1A1A] rounded-xl border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-500 transform hover:scale-105"
+              className="p-6 bg-[#1A1A1A]/50 rounded-xl border border-[#2A2A2A] hover:border-[#00FFA3]/50 transition-all duration-500 transform hover:scale-105"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-[#00FFA3] flex items-center justify-center text-[#0D0D0D] font-bold shadow-lg shadow-[#00FFA3]/30">
