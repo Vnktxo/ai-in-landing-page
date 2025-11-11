@@ -1,36 +1,14 @@
-'use client';
+// src/app/page.tsx
+import React, { Suspense } from 'react';
+import HomePageContent from '@/components/HomePageContent';
 
-import Hero from "@/components/Hero";
-import ProofPoints from "@/components/ProofPoints";
-import TargetAudience from "@/components/TargetAudience";
-import Instructor from "@/components/Instructors";
-import Curriculum from "@/components/Curriculum";
-import Tools from "@/components/Tools";
-import Pricing from "@/components/Pricing";
-import Comparison from "@/components/Comparison"; 
-import FAQ from "@/components/FAQ";
-import Guarantee from "@/components/Guarantee";
-import FinalCTA from "@/components/FinalCTA";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-
-
+// This component remains a Server Component
+// It wraps the Client Component in Suspense, which is best practice
 export default function Home() {
   return (
-    <> 
-      <main className="flex min-h-screen flex-col items-center justify-between">
-        <Hero />
-
-        <ScrollReveal><ProofPoints /></ScrollReveal>
-        <ScrollReveal><TargetAudience /></ScrollReveal>
-        <ScrollReveal><Instructor /></ScrollReveal>
-        <ScrollReveal><Curriculum /></ScrollReveal>
-        <ScrollReveal><Tools /></ScrollReveal>
-        <ScrollReveal><Pricing /></ScrollReveal>
-        <ScrollReveal><Comparison /></ScrollReveal>
-        <ScrollReveal><FAQ /></ScrollReveal>
-        <ScrollReveal><Guarantee /></ScrollReveal>
-        <ScrollReveal><FinalCTA /></ScrollReveal>
-      </main>
-    </>
+    // Fallback can be a simple loading spinner or just null
+    <Suspense fallback={null}>
+      <HomePageContent />
+    </Suspense>
   );
 }
