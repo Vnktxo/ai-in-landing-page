@@ -62,7 +62,7 @@ const BenefitCard = ({ icon, title }: { icon: React.ReactNode, title: string }) 
 
 const ProofPoints = () => {
   return (
-    <section className="w-full py-20 bg-[#0D0D0D] border-y border-[#2A2A2A]">
+    <section className="w-full py-20 bg-[#0D0D0D] border-y border-[#2A2A2A] hover">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* This 3x3 grid places the 5th item in the center */}

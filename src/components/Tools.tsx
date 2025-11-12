@@ -31,9 +31,30 @@ const TOOLS = [
   { icon: SiClaude, name: "Claude" }
 ];
 
+// Reusable Testimonial Card Component
+const TestimonialCard = ({ name, role, text }: { name: string, role: string, text: string }) => (
+  <div
+    className="p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-2xl hover:border-[#00FFA3]/50 transform hover:scale-105 transition duration-300
+               w-[80vw] md:w-full flex-shrink-0" // Sized for the mobile slider
+  >
+    <div className="flex mb-4 gap-1">
+      {[...Array(5)].map((_, j) => (
+        <span key={j} className="text-[#00FFA3]">★</span>
+      ))}
+    </div>
+    <p className="text-[#E0E0E0] mb-4 italic">&ldquo;{text}&rdquo;</p>
+    <div className="border-t border-[#2A2A2A] pt-4">
+      <p className="text-[#E0E0E0] font-semibold">{name}</p>
+      <p className="text-[#E0E0E0]/60 text-sm">{role}</p>
+    </div>
+  </div>
+);
+
+
 const Tools = () => {
   return (
-    <section className="w-full py-20 bg-transparent">
+    // Restored the solid background color
+    <section className="w-full py-20 bg-[#0D0D0D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Testimonials Section */}
         <div className="text-center mb-12">
@@ -41,25 +62,21 @@ const Tools = () => {
             Real Results from <span className="text-[#00FFA3]">Real Students</span>
           </h2>
         </div>
-       
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        
+        {/* === Desktop Grid (Visible > md) === */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {TESTIMONIALS.map((t, i) => (
-            <div
-              key={i}
-              className="p-6  bg-[#1A1A1A]/70 border border-[#2A2A2A] rounded-2xl backdrop-blur-xl hover:border-[#00FFA3]/50 transform hover:scale-105 transition duration-300"
-            >
-              <div className="flex mb-4 gap-1">
-                {[...Array(5)].map((_, j) => (
-                  <span key={j} className="text-[#00FFA3]">★</span>
-                ))}
-              </div>
-              <p className="text-[#E0E0E0] mb-4 italic">&ldquo;{t.text}&rdquo;</p>
-              <div className="border-t border-[#2A2A2A] pt-4">
-                <p className="text-[#E0E0E0] font-semibold">{t.name}</p>
-                <p className="text-[#E0E0E0]/60 text-sm">{t.role}</p>
-              </div>
-            </div>
+            <TestimonialCard key={i} name={t.name} role={t.role} text={t.text} />
           ))}
+        </div>
+
+        {/* === Mobile Slider (Visible < md) === */}
+        <div className="md:hidden mb-16">
+          <InfiniteSlider gap={20} duration={40}>
+            {TESTIMONIALS.map((t, i) => (
+              <TestimonialCard key={i} name={t.name} role={t.role} text={t.text} />
+            ))}
+          </InfiniteSlider>
         </div>
 
         {/* Tools Section */}
@@ -72,7 +89,7 @@ const Tools = () => {
               return (
                 <div key={index} className="flex flex-col items-center px-8">
                   <IconComponent className="text-5xl text-[#00FFA3]" />
-                  <span className="mt-2 text-[#E0E0E0]/70 whitespace-nowrap">{tool.name}</span>
+                  <span className="mt-2 text-[#E0E0E0]/7Opening 'vnktxo/ai-in-landing-page/ai-in-landing-page-3b2ac0287c9768cf89722e24a3cc4c3b220f38bc/src.app/page.tsx' to analyze.70 whitespace-nowrap">{tool.name}</span>
                 </div>
               );
             })}

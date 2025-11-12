@@ -46,12 +46,12 @@ const Comparison = () => {
   return (
     <section id="compare" className="w-full py-20 bg-transparent relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#00FFA3]/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-transparent rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-[#E0E0E0] mb-4">
-            Why <span className="text-[#00FFA3] drop-shadow-[0_0_20px_rgba(0,255,163,0.5)]">AI in Practice</span> Wins
+            Why <span className="text-[#00FFA3] drop-shadow-[0_0_20px_rgba(0,255,163,0.5)]">GrowInSTYL</span> Wins
           </h2>
           <p className="mt-4 text-xl text-[#E0E0E0]/70 max-w-3xl mx-auto">
             Traditional centers waste your time. Online courses leave you stranded. We deliver results.
@@ -73,7 +73,7 @@ const Comparison = () => {
                   Online Courses
                 </th>
                 <th className="p-6 text-center text-xl font-bold text-[#00FFA3] bg-gradient-to-br from-[#00FFA3]/20 to-[#00FFA3]/5 border-2 border-[#00FFA3] rounded-tr-xl">
-                  AI in Practice ✓
+                  GrowInSTYL ✓
                 </th>
               </tr>
             </thead>
