@@ -1,9 +1,10 @@
 import React from 'react';
+import Link from 'next/link'; // Make sure Link is imported
 
 const pricingPlans = [
   {
     title: 'AI Starter Pack',
-    price: '₹10,999',
+    price: '₹39,996',
     earlyBird: '₹9,999',
     features: [
       '16 Hours Hands-on Training',
@@ -18,7 +19,7 @@ const pricingPlans = [
   },
   {
     title: 'AI Pro Builder',
-    price: '₹12,999',
+    price: '₹49,999',
     earlyBird: '₹11,999',
     features: [
       'All Starter Features',
@@ -33,7 +34,7 @@ const pricingPlans = [
   },
   {
     title: 'AI Career Accelerator',
-    price: '₹15,999',
+    price: '₹59,999',
     earlyBird: '₹14,999',
     features: [
       'All Pro Features',
@@ -53,8 +54,8 @@ const Pricing = () => {
     <section id="pricing" className="w-full py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-block rounded-lg bg-[#00FFA3]/10 border border-[#00FFA3]/30 px-4 py-2 text-sm text-[#00FFA3] mb-4">
-            Early Bird: Save ₹1,000 on any package!
+          <div className="inline-block rounded-lg bg-[red]/25 border border-[red]/30 px-4 py-2 text-sm text-[red] mb-4 animate-pulse">
+            Limited Time: ONLY FOR BATCH - 1
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#E0E0E0]">Choose Your Plan</h2>
           <p className="mt-4 text-xl text-[#E0E0E0]/70 max-w-3xl mx-auto">
@@ -64,7 +65,6 @@ const Pricing = () => {
 
         <div className="grid gap-8 lg:grid-cols-3">
           {pricingPlans.map((plan) => (
-            // Merged the two nested divs into one
             <div
               key={plan.title}
               // Border color: gold for valuable, green for popular, default otherwise
@@ -95,8 +95,11 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#enroll"
+              
+              {/* === THIS BLOCK IS NOW FIXED === */}
+              {/* Changed from <link> to <Link> */}
+              <Link
+                href="/enroll"
                 // Button logic: gold for valuable, green for popular, neutral otherwise
                 className={`block w-full py-3 text-center rounded-xl font-bold text-lg transition duration-300 transform hover:scale-105 ${
                   plan.valuable
@@ -107,15 +110,20 @@ const Pricing = () => {
                 }`}
               >
                 Enroll Now
-              </a>
+              </Link>
+              {/* ============================== */}
+
             </div>
           ))}
         </div>
 
-        {/* Moved Student Discount box outside of the map loop */}
-        <div className="mt-12 text-center p-6 bg-[#1A1A1A]/20 border border-[#2A2A2A] backdrop-blur-2xl rounded-xl">
+        {/* Cleaned up the text block */}
+        <div className="mt-12 text-center p-4 bg-[#1A1A1A]/20 border border-[#2A2A2A] backdrop-blur-2xl rounded-xl">
           <p className="text-lg text-[#E0E0E0]">
-            <span className="text-[#00FFA3] font-semibold">Student Discount:</span> Get any package for ₹7,999 with valid student ID (Max 3 per batch)
+            <span className="text-[#00FFA3] font-semibold">Limited Time Offer:</span> Get any package with 75% OFF.
+          </p>
+          <p className="text-sm text-[#E0E0E0]/70">
+            The price mentioned above is inclusive of all tax.
           </p>
         </div>
       </div>

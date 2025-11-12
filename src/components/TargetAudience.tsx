@@ -39,7 +39,7 @@ const TargetAudience = () => {
             <div className="w-12 h-12 rounded-full bg-[#00FFA3]/10 flex items-center justify-center mb-4">
               <span className="text-2xl text-[#00FFA3]">◆</span>
             </div>
-            <h3 className="text-xl font-bold text-[#E0E0E0] mb-3">2024&apos;s Hottest AI Toolkit</h3>
+            <h3 className="text-xl font-bold text-[#E0E0E0] mb-3">2025&apos;s Hottest AI Toolkit</h3>
             <p className="text-[#E0E0E0]/70">
               Learn the actual tools driving the industry: Midjourney, DALL-E, RunwayML, GitHub Copilot, n8n automation, and more.
             </p>

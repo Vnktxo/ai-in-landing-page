@@ -23,7 +23,7 @@ export default function ContactPage() {
                 href="mailto:hello@aiinpractice.com" 
                 className="text-[#00FFA3] hover:underline"
               >
-                hello@aiinpractice.com
+                growinstyl.ai@gmail.com
               </a>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function ContactPage() {
                 href="tel:+919876543210" 
                 className="text-[#00FFA3] hover:underline"
               >
-                +91 98765 43210
+                +91 9500099066
               </a>
             </div>
           </div>
@@ -46,11 +46,6 @@ export default function ContactPage() {
             <FiMapPin className="h-6 w-6 mt-1 text-[#00FFA3]" />
             <div>
               <h2 className="text-xl font-semibold">Location</h2>
-              <p className="text-[#E0E0E0]/70">
-                AI in Practice (Classroom)
-                <br />
-                Kovilambakkam, Chennai, Tamil Nadu
-              </p>
             </div>
           </div>
         </div>

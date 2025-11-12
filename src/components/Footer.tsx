@@ -19,10 +19,10 @@ const Footer = () => {
               <a href="mailto: growinstyl.ai@gmail.com" aria-label="Email" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
                 <FiMail size={20} />
               </a>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
+              <a href="https://wa.me/7358108015" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
                 <SiWhatsapp size={20} />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
+              <a href="https://www.linkedin.com/in/finneystyl/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#E0E0E0]/70 hover:text-[#00FFA3]">
                 <SiLinkedin size={20} />
               </a>
             </div>

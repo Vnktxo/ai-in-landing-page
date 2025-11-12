@@ -2,26 +2,23 @@
 "use client";
 import React, { useState, useCallback } from 'react';
 import { FiX } from 'react-icons/fi';
+import { useRouter } from 'next/navigation'; // 👈 Import useRouter
 
 interface AdModalProps {
   onClose: () => void;
 }
 
 export const AdModal: React.FC<AdModalProps> = ({ onClose }) => {
-  // === CHANGED ===
-  // Updated state to hold all three form fields
+  const router = useRouter(); // 👈 Initialize the router
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
   });
-  // ===============
-
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null); // 👈 For showing errors
 
-  // === CHANGED ===
-  // Added a generic handleChange function
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -29,16 +26,17 @@ export const AdModal: React.FC<AdModalProps> = ({ onClose }) => {
       [name]: value,
     }));
   };
-  // ===============
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => { // Make async
+  // === THIS FUNCTION IS NOW UPDATED ===
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.phone || isLoading) return;
     
     setIsLoading(true);
-    
+    setError(null); // Clear any old errors
+
     try {
-      const response = await fetch('/api/submit', { // Call your new API route
+      const response = await fetch('/api/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,20 +45,23 @@ export const AdModal: React.FC<AdModalProps> = ({ onClose }) => {
       });
 
       if (response.ok) {
+        // SUCCESS: Data sent to Google Sheets
         setIsSubmitted(true);
+        // Now redirect to the payment page
+        router.push('/enroll');
       } else {
-        // Handle error (e.g., show a toast message)
-        console.error("Form submission failed");
-        alert("There was an error submitting your form. Please try again.");
+        // Handle server errors (e.g., "Missing required fields")
+        const data = await response.json();
+        setError(data.error || 'Submission failed. Please try again.');
+        setIsLoading(false);
       }
-
-    } catch (error) {
-      console.error("Network error:", error);
-      alert("A network error occurred. Please try again.");
-    } finally {
+    } catch (err) {
+      // Handle network errors
+      setError('An error occurred. Please check your connection.');
       setIsLoading(false);
     }
-  }, [formData, isLoading]);
+  }, [formData, isLoading, router]);
+  // === END OF UPDATES ===
 
   return (
     // Overlay
@@ -68,83 +69,77 @@ export const AdModal: React.FC<AdModalProps> = ({ onClose }) => {
       {/* Modal Content */}
       <div className="relative max-w-lg w-full p-10 bg-[#1A1A1A]/90 border-2 border-[#00FFA3]/30 rounded-2xl shadow-2xl shadow-[#00FFA3]/10 m-4">
         
-        {/* Close Button (Icon) */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-[#E0E0E0]/50 hover:text-[#00FFA3]"
-        >
+        <button onClick={onClose} className="absolute top-4 right-4 ...">
           <FiX size={20} />
         </button>
 
-        {/* Form Content (from Hero) */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
+        <div className="flex flex-col sm:flex-row ... mb-6 gap-4">
           <h2 className="text-2xl font-bold text-[#E0E0E0]">Secure Your Seat</h2>
-          <div className="bg-yellow-500/20 border border-yellow-500/50 px-4 py-2 rounded-full">
+          <div className="bg-yellow-500/20 border ...">
             <span className="text-yellow-400 font-bold text-sm">Only 25 Seats Left! </span>
           </div>
         </div>
         
-        {/* === START OF FORM CHANGES === */}
-        {/* Changed to a stacked form with space-y-4 */}
         <form onSubmit={handleSubmit} className="space-y-4">
           
           {/* Name Input */}
           <input
             type="text"
-            name="name" // Added name attribute
+            name="name"
             placeholder="Your Full Name"
             value={formData.name}
-            onChange={handleChange} // Use generic handler
+            onChange={handleChange}
             required
             disabled={isSubmitted || isLoading}
-            className="w-full p-4 rounded-xl border-2 border-[#2A2A2A] bg-[#0D0D0D] text-[#E0E0E0] placeholder-[#E0E0E0]/50 focus:ring-2 focus:ring-[#00FFA3] focus:border-[#00FFA3] transition duration-300 text-lg"
+            className="w-full p-4 ..."
           />
           
           {/* Phone Input */}
           <input
             type="tel"
-            name="phone" // Added name attribute
+            name="phone"
             placeholder="Your Phone Number"
             value={formData.phone}
-            onChange={handleChange} // Use generic handler
+            onChange={handleChange}
             required
             disabled={isSubmitted || isLoading}
-            className="w-full p-4 rounded-xl border-2 border-[#2A2A2A] bg-[#0D0D0D] text-[#E0E0E0] placeholder-[#E0E0E0]/50 focus:ring-2 focus:ring-[#00FFA3] focus:border-[#00FFA3] transition duration-300 text-lg"
+            className="w-full p-4 ..."
           />
 
           {/* Email Input */}
           <input
             type="email"
-            name="email" // Added name attribute
+            name="email"
             placeholder="Your Professional Email"
             value={formData.email}
-            onChange={handleChange} // Use generic handler
+            onChange={handleChange}
             required
             disabled={isSubmitted || isLoading}
-            className="w-full p-4 rounded-xl border-2 border-[#2A2A2A] bg-[#0D0D0D] text-[#E0E0E0] placeholder-[#E0E0E0]/50 focus:ring-2 focus:ring-[#00FFA3] focus:border-[#00FFA3] transition duration-300 text-lg"
+            className="w-full p-4 ..."
           />
+
+          {/* Error Message Display */}
+          {error && (
+            <p className="text-red-500 text-sm text-center">{error}</p>
+          )}
           
           {/* Submit Button */}
           <button
             type="submit"
             disabled={isSubmitted || isLoading}
-            // Changed button to be full-width
-            className={`w-full px-8 py-4 rounded-xl font-bold text-lg transition duration-300 transform hover:scale-105 whitespace-nowrap ${
+            className={`w-full px-8 py-4 ... ${
               isSubmitted 
                 ? 'bg-emerald-600 text-white cursor-default' 
-                : 'bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 shadow-xl shadow-[#00FFA3]/30'
+                : 'bg-[#00FFA3] text-[#0D0D0D] ...'
             }`}
           >
-            {isSubmitted ? '✓ Enrolled!' : isLoading ? 'Processing... ' : 'Enroll Now!'}
+            {isSubmitted ? '✓ Details Saved!' : isLoading ? 'Saving...' : 'Secure My Seat'}
           </button>
         </form>
-     
+
         <div className="text-center mt-6">
-          <button
-            onClick={onClose}
-            className="text-sm text-[#E0E0E0]/70 hover:text-[#00FFA3] underline"
-          >
-            Know More About the Course
+          <button onClick={onClose} className="text-sm ...">
+            Or, Know More About the Course
           </button>
         </div>
       </div>

@@ -18,11 +18,9 @@ const Header = () => {
       scrolled ? 'backdrop-blur-md shadow-3xl bg-[#000000]/20 shadow-[#00FFA3]/10' : 'bg-[#0D0D0D]/80 backdrop-blur-sm'
     } border-b border-[#2A2A2A]`}>
       
-      {/* Changed justify-center to justify-between */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-between items-center">
         <Link
           href="/"
-          // Changed w-full to w-auto
           className="w-auto flex flex-col items-center space-y-1 text-2xl font-bold text-primary-dark hover:text-primary-light group"
         >
           <Image
@@ -48,22 +46,25 @@ const Header = () => {
           </a>
          
           <div className="flex items-center gap-2">
-            <a
-              href="#enroll"
+            {/* === THIS BLOCK IS NOW FIXED === */}
+            {/* Changed from <link> to <Link> */}
+            <Link
+              href="/enroll"
               className="px-5 py-2 text-sm font-semibold rounded-full bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 transition duration-300 shadow-lg shadow-[#00FFA3]/30"
             >
               Enroll Now
-            </a>
+            </Link>
+            {/* ============================== */}
           </div>
         </nav>
 
-        {/* This is the new Mobile Enroll Button */}
-        <a
-          href="#enroll"
+        {/* This is the Mobile Enroll Button */}
+        <Link
+          href="/enroll"
           className="md:hidden px-4 py-2 text-sm font-semibold rounded-full bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 transition duration-300"
         >
           Enroll Now
-        </a>
+        </Link>
       </div>
     </header>
   );

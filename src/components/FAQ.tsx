@@ -94,11 +94,11 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center p-8 bg-[#0D0D0D] border border-[#00FFA3]/30 rounded-2xl">
-          <p className="text-lg text-[#E0E0E0] mb-4">Still have questions?</p>
+        <div className="mt-12 text-center p-8 bg-transparent">
+          <p className="text-lg bg-[#0D0D0D]/30 text-[#E0E0E0] mb-4">Still have questions?</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/+917358108015"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-full bg-[#00FFA3] text-[#0D0D0D] font-semibold hover:bg-[#00FFA3]/90 transition duration-300 shadow-lg shadow-[#00FFA3]/30"
@@ -106,7 +106,7 @@ const FAQ = () => {
               WhatsApp Us
             </a>
             <a
-              href="mailto:hello@aiinpractice.com"
+              href="mailto: growinstyl.ai@gmail.com"
               className="px-6 py-3 rounded-full bg-[#2A2A2A] text-[#E0E0E0] font-semibold hover:bg-[#00FFA3] hover:text-[#0D0D0D] transition duration-300"
             >
               Email Us

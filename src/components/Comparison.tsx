@@ -2,6 +2,7 @@
 "use client";
 import React from 'react';
 import { FiCheckCircle, FiXCircle } from 'react-icons/fi';
+import Link from 'next/link';
 
 const Comparison = () => {
   const comparisonData = [
@@ -39,7 +40,7 @@ const Comparison = () => {
       feature: 'Price',
       traditional: { text: '₹25,000-50,000', icon: <FiXCircle className="inline mr-2 text-red-500" /> },
       online: { text: '₹2,000-8,000', icon: null },
-      ours: { text: '₹9,999 (Early Bird: ₹8,999)', icon: <FiCheckCircle className="inline mr-2 text-[#00FFA3]" /> },
+      ours: { text: '₹9,999', icon: <FiCheckCircle className="inline mr-2 text-[#00FFA3]" /> },
     },
   ];
 
@@ -125,12 +126,12 @@ const Comparison = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <a
-            href="#enroll"
+          <Link
+            href="/enroll"
             className="inline-flex items-center px-8 py-4 text-lg font-bold rounded-full text-[#0D0D0D] bg-[#00FFA3] hover:bg-[#00FFA3]/90 transition duration-300 shadow-xl shadow-[#00FFA3]/30 transform hover:scale-105"
           >
             Start Building Your Portfolio →
-          </a>
+          </Link>
         </div>
       </div>
     </section>
