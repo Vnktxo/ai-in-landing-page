@@ -31,21 +31,36 @@ export const AdModal: React.FC<AdModalProps> = ({ onClose }) => {
   };
   // ===============
 
-  const handleSubmit = useCallback((e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => { // Make async
     e.preventDefault();
-    // === CHANGED ===
-    // Updated check for all three fields
     if (!formData.name || !formData.email || !formData.phone || isLoading) return;
     
     setIsLoading(true);
-    console.log("Modal Form Data Submitted: ", formData); // For testing
     
-    // This is where you would call your Razorpay/backend logic
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/submit', { // Call your new API route
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        // Handle error (e.g., show a toast message)
+        console.error("Form submission failed");
+        alert("There was an error submitting your form. Please try again.");
+      }
+
+    } catch (error) {
+      console.error("Network error:", error);
+      alert("A network error occurred. Please try again.");
+    } finally {
       setIsLoading(false);
-      setIsSubmitted(true);
-    }, 1500);
-  }, [formData, isLoading]); // Updated dependency
+    }
+  }, [formData, isLoading]);
 
   return (
     // Overlay
