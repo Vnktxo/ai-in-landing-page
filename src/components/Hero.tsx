@@ -178,7 +178,7 @@ const Hero = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[#00FFA3]">✓</span>
-                  <span>Batch 1 Starts Oct 14th</span>
+                  <span>Batch 1 Starts December 1st</span>
                 </div>
               </div>
             </div>
