@@ -44,12 +44,12 @@
           </div>
           
           <div className="text-center mt-14">
-            <Link
-                href="/enroll"
+            <a
+                href="#enroll"
                 className="px-8 py-5 text-sm font-semibold rounded-full bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 transition duration-300 shadow-lg shadow-[#00FFA3]/30"
               >
                 Enroll Now
-              </Link>
+              </a>
           </div>
         </div>
       </section>

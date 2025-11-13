@@ -48,23 +48,23 @@ const Header = () => {
           <div className="flex items-center gap-2">
             {/* === THIS BLOCK IS NOW FIXED === */}
             {/* Changed from <link> to <Link> */}
-            <Link
-              href="/enroll"
+            <a
+              href="#enroll"
               className="px-5 py-2 text-sm font-semibold rounded-full bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 transition duration-300 shadow-lg shadow-[#00FFA3]/30"
             >
               Enroll Now
-            </Link>
+            </a>
             {/* ============================== */}
           </div>
         </nav>
 
         {/* This is the Mobile Enroll Button */}
-        <Link
-          href="/enroll"
+        <a
+          href="#enroll"
           className="md:hidden px-4 py-2 text-sm font-semibold rounded-full bg-[#00FFA3] text-[#0D0D0D] hover:bg-[#00FFA3]/90 transition duration-300"
         >
           Enroll Now
-        </Link>
+        </a>
       </div>
     </header>
   );

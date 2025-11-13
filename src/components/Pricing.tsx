@@ -1,11 +1,13 @@
+'use client';
 import React from 'react';
-import Link from 'next/link'; // Make sure Link is imported
+import { usePlan } from '@/context/PlanContext';
 
 const pricingPlans = [
   {
     title: 'AI Starter Pack',
     price: '₹39,996',
     earlyBird: '₹9,999',
+    amount: 9999,
     features: [
       '16 Hours Hands-on Training',
       'Build 5+ Portfolio Projects',
@@ -21,6 +23,7 @@ const pricingPlans = [
     title: 'AI Pro Builder',
     price: '₹49,999',
     earlyBird: '₹11,999',
+    amount: 11999,
     features: [
       'All Starter Features',
       'Two 1:1 Project Reviews',
@@ -36,6 +39,7 @@ const pricingPlans = [
     title: 'AI Career Accelerator',
     price: '₹59,999',
     earlyBird: '₹14,999',
+    amount: 14999,
     features: [
       'All Pro Features',
       'Job Referral Network',
@@ -50,6 +54,17 @@ const pricingPlans = [
 ];
 
 const Pricing = () => {
+  const {selectPlan} = usePlan();
+  const handleEnrollClick = (plan: any) => {
+    // 4. Set the global plan state
+    selectPlan({ name: plan.title, amount: plan.amount });
+    
+    // 5. Scroll to the enrollment form
+    const enrollSection = document.getElementById('enroll');
+    if (enrollSection) {
+      enrollSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section id="pricing" className="w-full py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,11 +111,9 @@ const Pricing = () => {
                 ))}
               </ul>
               
-              {/* === THIS BLOCK IS NOW FIXED === */}
-              {/* Changed from <link> to <Link> */}
-              <Link
-                href="/enroll"
-                // Button logic: gold for valuable, green for popular, neutral otherwise
+           
+              <button
+                onClick={() => handleEnrollClick(plan)}
                 className={`block w-full py-3 text-center rounded-xl font-bold text-lg transition duration-300 transform hover:scale-105 ${
                   plan.valuable
                     ? 'bg-[#FFD700] text-[#0D0D0D] hover:bg-[#FFD700] hover:text-[#0D0D0D]  shadow-lg shadow-[#FFD700]/30'
@@ -110,7 +123,7 @@ const Pricing = () => {
                 }`}
               >
                 Enroll Now
-              </Link>
+              </button>
               {/* ============================== */}
 
             </div>
@@ -121,9 +134,6 @@ const Pricing = () => {
         <div className="mt-12 text-center p-4 bg-[#1A1A1A]/20 border border-[#2A2A2A] backdrop-blur-2xl rounded-xl">
           <p className="text-lg text-[#E0E0E0]">
             <span className="text-[#00FFA3] font-semibold">Limited Time Offer:</span> Get any package with 75% OFF.
-          </p>
-          <p className="text-sm text-[#E0E0E0]/70">
-            The price mentioned above is inclusive of all tax.
           </p>
         </div>
       </div>

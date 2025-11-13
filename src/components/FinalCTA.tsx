@@ -11,12 +11,12 @@ const FinalCTA = () => {
         <p className="text-xl text-[#E0E0E0]/70 mb-8 max-w-2xl mx-auto">
           Only 30 seats available across all batches. Claim your spot before it&apos;s gone!
         </p>
-        <Link
-          href="/enroll"
+        <a
+          href="#enroll"
           className="inline-flex items-center px-12 py-5 text-xl font-bold rounded-full text-[#0D0D0D] bg-[#00FFA3] hover:bg-[#00FFA3]/90 transition duration-300 shadow-2xl shadow-[#00FFA3]/40 transform hover:scale-110"
         >
           Enroll Now →
-        </Link>
+        </a>
         <p className="mt-6 text-sm text-[#E0E0E0]/50">
           Batch 1 starts December 1st • Early bird pricing ends December 7th
         </p>
