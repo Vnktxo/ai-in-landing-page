@@ -55,7 +55,7 @@ export const AdModal: React.FC<AdModalProps> = ({ onClose }) => {
         setError(data.error || 'Submission failed. Please try again.');
         setIsLoading(false);
       }
-    } catch (err) {
+    } catch (_err) {
       // Handle network errors
       setError('An error occurred. Please check your connection.');
       setIsLoading(false);

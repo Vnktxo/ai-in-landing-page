@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiCheckCircle, FiPhone, FiImage, } from 'react-icons/fi';
 import { SiWhatsapp } from 'react-icons/si';
 
 export default function EnrollPage() {

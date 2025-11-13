@@ -1,6 +1,5 @@
   // src/components/Curriculum.tsx
   import React from 'react';
-  import Link from 'next/link';
 
   const curriculumData = [
     { week: 1, title: 'Intoduction to AI', tools: 'ChatGPT, Gemini, Claude' },

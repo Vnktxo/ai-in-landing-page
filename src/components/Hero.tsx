@@ -20,6 +20,12 @@ const loadScript = (src: string) => {
   });
 };
 
+type RazorpayResponse = {
+  razorpay_payment_id: string;
+  razorpay_order_id: string;
+  razorpay_signature: string;
+};
+
 const Hero = () => {
   const router = useRouter(); 
   const { selectedPlan } = usePlan();
@@ -29,7 +35,7 @@ const Hero = () => {
     email: '',
     phone: '',
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false); // This was unused
   const [isLoading, setIsLoading] = useState(false);
   const [seatsLeft] = useState(10);
   const [error, setError] = useState<string | null>(null);
@@ -47,6 +53,7 @@ const Hero = () => {
     }));
   };
 
+  // === THIS FUNCTION IS NOW CORRECTED ===
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.email || !formData.name || !formData.phone || isLoading) return;
@@ -69,7 +76,6 @@ const Hero = () => {
 
     try {
       // 2. Create Razorpay Order
-      // We assume the Early Bird price of 9999 for this form
       const amount = selectedPlan.amount; 
       
       const orderResponse = await fetch('/api/create-order', {
@@ -79,13 +85,15 @@ const Hero = () => {
       });
       // ============================
 
+      // 3. Check if order creation FAILED
       if (!orderResponse.ok) {
         throw new Error('Failed to create payment order');
       }
 
+      // 4. Get the successful order details
       const { order } = await orderResponse.json();
 
-      // 3. Open Razorpay Modal
+      // 5. Create Razorpay Options
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!, // Your public Key ID
         amount: order.amount,
@@ -94,7 +102,7 @@ const Hero = () => {
         description: selectedPlan.name,
         order_id: order.id,
         // This handler is called on successful payment
-        handler: function (response: any) {
+        handler: function (response: RazorpayResponse) {
           console.log(response);
           // Redirect to a thank-you page
           router.push('/thank-you'); 
@@ -109,7 +117,8 @@ const Hero = () => {
         },
       };
 
-      // @ts-ignore
+      // 6. Open the Razorpay Modal
+      // @ts-expect-error
       const rzp = new window.Razorpay(options);
       rzp.open();
 
@@ -121,6 +130,7 @@ const Hero = () => {
       setIsLoading(false);
     }
   }, [formData, isLoading, router, selectedPlan]);
+  // === END OF CORRECTION ===
 
   return (
     <>

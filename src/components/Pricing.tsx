@@ -2,7 +2,18 @@
 import React from 'react';
 import { usePlan } from '@/context/PlanContext';
 
-const pricingPlans = [
+// Define the plan structure
+interface PricingPlan {
+  title: string;
+  price: string;
+  earlyBird: string;
+  amount: number;
+  features: string[];
+  popular: boolean;
+  valuable: boolean;
+}
+
+const pricingPlans: PricingPlan[] = [
   {
     title: 'AI Starter Pack',
     price: '₹39,996',
@@ -55,7 +66,9 @@ const pricingPlans = [
 
 const Pricing = () => {
   const {selectPlan} = usePlan();
-  const handleEnrollClick = (plan: any) => {
+  
+  // === THIS LINE IS NOW FIXED ===
+  const handleEnrollClick = (plan: PricingPlan) => {
     // 4. Set the global plan state
     selectPlan({ name: plan.title, amount: plan.amount });
     
