@@ -118,14 +118,14 @@ const Hero = () => {
       };
 
       // 6. Open the Razorpay Modal
-      // @ts-expect-error
+      // @ts-expect-error Razorpay is loaded dynamically
       const rzp = new window.Razorpay(options);
       rzp.open();
 
       setIsLoading(false);
 
-    } catch (err) {
-      console.error(err);
+    } catch (_err) {
+      console.error(_err);
       setError('An error occurred. Please try again.');
       setIsLoading(false);
     }
