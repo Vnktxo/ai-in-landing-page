@@ -18,7 +18,7 @@ interface PlanContextType {
 // Set a default plan (your Starter Pack)
 const defaultPlan: Plan = {
   name: "AI Starter Pack",
-  amount: 9999, // This is the amount in Rupees
+  amount: 10999, // This is the amount in Rupees
 };
 
 // Create the context
