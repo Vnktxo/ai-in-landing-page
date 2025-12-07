@@ -22,7 +22,7 @@ const Comparison = () => {
       feature: 'Duration',
       traditional: { text: '80-240+ Hours', icon: <FiXCircle className="inline mr-2 text-red-500" /> },
       online: { text: '40-60+ Hours (unfinished)', icon: <FiXCircle className="inline mr-2 text-red-500" /> },
-      ours: { text: 'Just 16 Hours (8 Weekends)', icon: <FiCheckCircle className="inline mr-2 text-[#00FFA3]" /> },
+      ours: { text: 'Just 16 Hours (8 Saturdays)', icon: <FiCheckCircle className="inline mr-2 text-[#00FFA3]" /> },
     },
     {
       feature: 'Support',
@@ -40,7 +40,7 @@ const Comparison = () => {
       feature: 'Price',
       traditional: { text: '₹25,000-50,000', icon: <FiXCircle className="inline mr-2 text-red-500" /> },
       online: { text: '₹2,000-8,000', icon: null },
-      ours: { text: '₹9,999', icon: <FiCheckCircle className="inline mr-2 text-[#00FFA3]" /> },
+      ours: { text: '₹10,999', icon: <FiCheckCircle className="inline mr-2 text-[#00FFA3]" /> },
     },
   ];
 

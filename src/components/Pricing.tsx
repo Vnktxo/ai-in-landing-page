@@ -17,8 +17,8 @@ const pricingPlans: PricingPlan[] = [
   {
     title: 'AI Starter Pack',
     price: '₹39,996',
-    earlyBird: '₹9,999',
-    amount: 9999,
+    earlyBird: '₹10,999',
+    amount: 10999,
     features: [
       '16 Hours Hands-on Training',
       'Build 5+ Portfolio Projects',
