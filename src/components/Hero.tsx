@@ -158,7 +158,7 @@ const Hero = () => {
   
               <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
                 <span className="block text-[#E0E0E0]">Master AI in</span>
-                <span className="block text-[#00FFA3] drop-shadow-[0_0_20px_rgba(0,255,163,0.5)]">8 Weekends</span>
+                <span className="block text-[#00FFA3] drop-shadow-[0_0_20px_rgba(0,255,163,0.5)]">8 Saturdays</span>
               </h1>
               <p className="mt-6 text-xl sm:text-2xl text-[#E0E0E0] max-w-2xl leading-relaxed">
                 Build the <span className="text-[#00FFA3] font-semibold">portfolio projects</span> employers&apos; actually want. Level up from AI-curious to AI-capable with 20+ powerful AI tools set to dominate 2026 — stay ahead, stay future-ready.

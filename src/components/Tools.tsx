@@ -5,7 +5,7 @@ import { SiOpenai, SiN8N, SiZapier, SiGithub, SiClaude, SiGooglegemini, SiGithub
 
 const TESTIMONIALS = [
   { 
-    name: "Vamsi V.", 
+    name: "Venkatesh S.", 
     role: "Engineering Student", 
     text: "Built my first AI automation pipeline and I'm already using it for my college project!" 
   },
