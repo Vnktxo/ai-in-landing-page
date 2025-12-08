@@ -83,7 +83,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-block rounded-lg bg-[red]/25 border border-[red]/30 px-4 py-2 text-sm text-[red] mb-4 animate-pulse">
-            Limited Time: ONLY FOR BATCH - 1
+            Limited Time Offer!
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#E0E0E0]">Choose Your Plan</h2>
           <p className="mt-4 text-xl text-[#E0E0E0]/70 max-w-3xl mx-auto">
