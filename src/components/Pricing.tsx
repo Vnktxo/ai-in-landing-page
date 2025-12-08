@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { usePlan } from '@/context/PlanContext';
+import { trackInitiateCheckout } from "@/lib/utils"; // <--- 1. IMPORT ADDED
 
 // Define the plan structure
 interface PricingPlan {
@@ -28,7 +29,7 @@ const pricingPlans: PricingPlan[] = [
       '7-Day Money-Back Guarantee',
     ],
     popular: false,
-    valuable: false, // Added for consistent data structure
+    valuable: false,
   },
   {
     title: 'AI Pro Builder',
@@ -59,7 +60,7 @@ const pricingPlans: PricingPlan[] = [
       '3 Months Career Guidance',
       'Priority Workshop Access',
     ],
-    popular: false, // Ensure only one is 'popular' if that's the logic
+    popular: false,
     valuable: true,
   },
 ];
@@ -67,8 +68,11 @@ const pricingPlans: PricingPlan[] = [
 const Pricing = () => {
   const {selectPlan} = usePlan();
   
-  // === THIS LINE IS NOW FIXED ===
   const handleEnrollClick = (plan: PricingPlan) => {
+    // <--- 2. TRACKING EVENT ADDED HERE ---
+    trackInitiateCheckout(); 
+    // -------------------------------------
+
     // 4. Set the global plan state
     selectPlan({ name: plan.title, amount: plan.amount });
     
@@ -78,6 +82,7 @@ const Pricing = () => {
       enrollSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
     <section id="pricing" className="w-full py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,7 +100,6 @@ const Pricing = () => {
           {pricingPlans.map((plan) => (
             <div
               key={plan.title}
-              // Border color: gold for valuable, green for popular, default otherwise
               className={`relative flex flex-col bg-[#1A1A1A]/50 p-8 rounded-2xl border-2 ${
                 plan.valuable ? 'border-[#FFD700] hover:border-[#FFD700]/70' : plan.popular ? 'border-[#00FFA3]' : 'border-[#2A2A2A]'
               } transition-all duration-300 transform hover:scale-105`}
@@ -124,7 +128,6 @@ const Pricing = () => {
                 ))}
               </ul>
               
-           
               <button
                 onClick={() => handleEnrollClick(plan)}
                 className={`block w-full py-3 text-center rounded-xl font-bold text-lg transition duration-300 transform hover:scale-105 ${
@@ -137,13 +140,10 @@ const Pricing = () => {
               >
                 Enroll Now
               </button>
-              {/* ============================== */}
-
             </div>
           ))}
         </div>
 
-        {/* Cleaned up the text block */}
         <div className="mt-12 text-center p-4 bg-[#1A1A1A]/20 border border-[#2A2A2A] backdrop-blur-2xl rounded-xl">
           <p className="text-lg text-[#E0E0E0]">
             <span className="text-[#00FFA3] font-semibold">Limited Time Offer:</span> Get any package with 75% OFF.

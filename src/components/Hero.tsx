@@ -2,8 +2,9 @@
 "use client";
 import React, { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Head from 'next/head'; // Import Head
+import Head from 'next/head'; 
 import { usePlan } from '@/context/PlanContext';
+import { trackInitiateCheckout } from "@/lib/utils"; // <--- 1. IMPORT ADDED
 
 // Function to load external scripts
 const loadScript = (src: string) => {
@@ -35,7 +36,7 @@ const Hero = () => {
     email: '',
     phone: '',
   });
-  // const [isSubmitted, setIsSubmitted] = useState(false); // This was unused
+  
   const [isLoading, setIsLoading] = useState(false);
   const [seatsLeft] = useState(10);
   const [error, setError] = useState<string | null>(null);
@@ -53,11 +54,15 @@ const Hero = () => {
     }));
   };
 
-  // === THIS FUNCTION IS NOW CORRECTED ===
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.email || !formData.name || !formData.phone || isLoading) return;
     
+    // <--- 2. TRACKING EVENT ADDED HERE ---
+    // This tracks that the user clicked the Pay button with valid data
+    trackInitiateCheckout(); 
+    // -------------------------------------
+
     setIsLoading(true);
     setError(null);
 
@@ -83,7 +88,6 @@ const Hero = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, amount, planName: selectedPlan.name }),
       });
-      // ============================
 
       // 3. Check if order creation FAILED
       if (!orderResponse.ok) {
@@ -95,7 +99,7 @@ const Hero = () => {
 
       // 5. Create Razorpay Options
       const options = {
-        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!, // Your public Key ID
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!, 
         amount: order.amount,
         currency: "INR",
         name: "GrowInSTYL",
@@ -104,6 +108,16 @@ const Hero = () => {
         // This handler is called on successful payment
         handler: function (response: RazorpayResponse) {
           console.log(response);
+
+          // OPTIONAL: You can track the "Purchase" event here before redirecting
+          // if (window.fbq) {
+          //   window.fbq('track', 'Purchase', {
+          //     currency: "INR", 
+          //     value: order.amount / 100,
+          //     content_name: selectedPlan.name
+          //   });
+          // }
+
           // Redirect to a thank-you page
           router.push('/thank-you'); 
         },
@@ -113,7 +127,7 @@ const Hero = () => {
           contact: formData.phone,
         },
         theme: {
-          color: "#4EB87C", // Your "Matrix Green"
+          color: "#4EB87C", 
         },
       };
 
@@ -130,16 +144,14 @@ const Hero = () => {
       setIsLoading(false);
     }
   }, [formData, isLoading, router, selectedPlan]);
-  // === END OF CORRECTION ===
 
   return (
     <>
       <Head>
-        {/* We can preload the script for better performance */}
         <link rel="preload" href="https://checkout.razorpay.com/v1/checkout.js" as="script" />
       </Head>
       <section id="hero" className="relative pt-32 pb-20 bg-gradient-to-b from-[#0D0D0D] text-[#E0E0E0] min-h-screen flex items-center overflow-hidden w-full">
-        {/* ... (rest of your Hero visual styles) ... */}
+        
         <div className="absolute inset-0 bg-hero-pattern opacity-30"></div>
         <div className="absolute top-20 left-10 w-96 h-96 bg-[#00FFA3]/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#00FFA3]/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -147,13 +159,13 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
             <div className="lg:col-span-7">
-              {/* ... (rest of your Hero text content) ... */}
+              
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500/50 rounded-full mb-6 animate-pulse">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                 </span>
-                <span className="text-red-400 font-bold text-sm">LIVE: {seatsLeft} Seats Left for Batch 1</span>
+                <span className="text-red-400 font-bold text-sm">LIVE: {seatsLeft} Seats Left</span>
               </div>
   
               <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
