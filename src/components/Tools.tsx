@@ -10,7 +10,7 @@ const TESTIMONIALS = [
     text: "Built my first AI automation pipeline and I'm already using it for my college project!" 
   },
   { 
-    name: "Rahul M.", 
+    name: "Rahul Antony.", 
     role: "Product Manager", 
     text: "The portfolio projects gave me something real to show in interviews. Worth every rupee." 
   },
@@ -18,6 +18,21 @@ const TESTIMONIALS = [
     name: "Ananya K.", 
     role: "Marketing Professional", 
     text: "Weekend format was perfect. Learned cutting-edge tools without taking time off work." 
+  },
+  { 
+    name: "Arjun P.", 
+    role: "Software Engineer", 
+    text: "Zero fluff, just straight practical application. I integrated the API logic I learned here into my company's internal tools the very next Monday." 
+  },
+  { 
+    name: "Meera S.", 
+    role: "Startup Founder", 
+    text: "As a non-technical founder, this gave me the confidence to build my MVP. The step-by-step guidance on AI tools was exactly what I needed." 
+  },
+  { 
+    name: "Karthik R.", 
+    role: "Data Analyst", 
+    text: "I automated my entire weekly reporting workflow using what I learned. The course literally saves me 5 hours of manual work every week." 
   }
 ];
 

@@ -32,9 +32,9 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     title: 'AI Pro Builder',
-    price: '₹49,999',
-    earlyBird: '₹11,999',
-    amount: 11999,
+    price: '₹59,999',
+    earlyBird: '₹14,999',
+    amount: 14999,
     features: [
       'All Starter Features',
       'Two 1:1 Project Reviews',
@@ -48,9 +48,9 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     title: 'AI Career Accelerator',
-    price: '₹59,999',
-    earlyBird: '₹14,999',
-    amount: 14999,
+    price: '₹79,999',
+    earlyBird: '₹19,999',
+    amount: 19999,
     features: [
       'All Pro Features',
       'Job Referral Network',

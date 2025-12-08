@@ -17,7 +17,7 @@ const FinalCTA = () => {
           Enroll Now →
         </a>
         <p className="mt-6 text-sm text-[#E0E0E0]/50">
-          Batch 1 starts December 1st • Early bird pricing ends December 7th
+          Batch 1 starts January 3rd • Early bird pricing ends December 15th
         </p>
       </div>
     </section>
